@@ -21,13 +21,6 @@ body{
     height: inherit;
     flex-direction: column;
 }
-.header{
-    position: fixed;
-    width: 100%;
-    height: 30vh;
-    background-color: white;
-    padding-bottom: 5px;
-}
 .logo{
     position: relative;
     display: flex;
@@ -40,17 +33,29 @@ body{
     width: 230px;
 }
 .search-bar input{
-    display: none;
+    /* display: none; */
     padding: auto;
+    border-radius: 5px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid rgb(255, 81, 0);
+    border-left: 1px solid rgb(255, 81, 0);
+}
+.search-bar input:focus{
+    outline: none;
+    border-bottom: 2px solid rgb(255, 0, 0);
+    border-left: 2px solid rgb(255, 0, 0);
+    border-top: 2px solid rgb(255, 0, 0);
 }
 .search-bar a{
+    color: black;
     float: inline-end;
     margin-right: 5px;
+    margin-top: 5px;
 }
 .home{
     width: 100%;
-    margin-top: 32vh;
-    background-color: aqua;
+    margin-top: 22vh;
 }
 .home .promotion{
     width: 100%;
@@ -69,22 +74,108 @@ body{
 }
 .home .bg-img{
     width: 100vw !important;
+    height: 62vh !important;
 }
 .home .bg-img img{
     width: inherit !important;
     height: inherit;
 }
+.shopNow{
+    margin-top: 10px;
+    text-align: center;
+}
+.buy-btn{
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    border: 0.5px solid rgb(255, 81, 0);
+    background-color: white;
+    color: rgb(255, 81, 0);
+    font-weight: bolder;
+    font-size: 18px;
+}
+.buy-btn:hover{
+    background-color: rgb(255, 81, 0);
+    color: white;
+    font-size: 19px;
+}
 
 /* Media Queries */
 @media screen and (max-width: 992px) {
+    .header{
+        position: fixed;
+        height: 20vh;
+        width: 100vw;
+        background-color: white;
+    }
+    .logo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: inherit;
+        height: 70%;
+    }
+    .logo h1, .logo h1 span{
+        font-size: 36px;
+    }
+    .logo h1 span{
+        color: rgb(255, 81, 0);
+    }
+    .logo h3{
+        font-size: 28px;
+        font-weight: bold;
+        opacity: 0.8;
+    }
+    .logo p{
+        font-size: 11px;
+        opacity: 0.6;
+    }
+    .menu{
+        /* display: none; */
+        position: relative;
+        display: inline;
+        margin-left: 5%;
+    }
+    .menu i{
+        position: relative;
+        font-size: 26px;
+    }
+    .menu ul{
+        display: none;
+        position: fixed;
+        /* margin-top: 15%; */
+        width: 70vw;
+        height: 84vh;
+        z-index: -2;
+    }
     .search-bar{
         position: relative;
-        top: -70%;
-        right: -75%;
+        right: -20%;
+        display: inline-block;
+        width: 240px;
+    }
+
+    .search-bar a i{
+        margin-left: 5px;
+        font-size: 20px;
+    }
+    .home{
+        margin-top: 21vh;
+    }
+    .home .promotion p{
+        font-size: 12px;
     }
 }
 
 @media screen and (min-width: 992px) {
+    .header{
+        position: fixed;
+        width: 100%;
+        height: 20vh;
+        background-color: white;
+        padding-bottom: 5px;
+    }
     .logo{
         width: 100vw;
         height: 80%;
@@ -113,6 +204,7 @@ body{
         position: relative;
         display: flex;
         justify-content: center;
+        margin-top: 10px;
    } 
    .menu i{
         display: none;
@@ -120,13 +212,13 @@ body{
    .menu ul{
         display: flex;
         flex-direction: row;
-        /* gap: 40px; */
    }
    .menu ul li{
         display: flex;
         align-items: center;
         width: 170px;
         height: 30px;
+        
         text-align: center;
         /* border: 1px solid black; */
         justify-content: center;
@@ -139,15 +231,25 @@ body{
     background-color: rgb(255, 81, 0);
     font-weight: bolder;
    }
+   .menu ul li a span:hover{
+    font-size: 17px;
+   }
    .menu ul li a{
     font-weight: bolder;
     color: black;
     opacity: 0.8;
-    font-size: 15px;
+    font-size: 16px;
+   }
+   .menu ul li .li:hover{
+    border: 0.1px solid gray;
+    padding: 6px;
+    opacity: 0.7;
+    border-radius: 5px;
+    font-size: 17px;
    }
    .search-bar{
         position: relative;
-        top: -75% !important;
+        top: -90% !important;
         right: -77% !important;
    }
 }
