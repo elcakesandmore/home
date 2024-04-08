@@ -33,7 +33,8 @@ body{
     width: 230px;
 }
 .search-bar input{
-    /* display: none; */
+    display: none;
+    /* display: inline; */
     padding: auto;
     border-radius: 5px;
     height: 30px;
