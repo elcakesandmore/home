@@ -17,7 +17,9 @@ menuList = document.getElementById("menu-list");
 function showMenuList(){
     if (menuList.style.display === "flex"){
         menuList.style.display = "none";
+        menuIcon.innerHTML = `<i class="fa-solid fa-bars"></i>`;
     }else{
         menuList.style.display = "flex";
+        menuIcon.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
     }
 }
