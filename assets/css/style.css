@@ -102,6 +102,7 @@ body{
 }
 
 /* Media Queries */
+
 @media screen and (max-width: 992px) {
     .header{
         position: fixed;
@@ -138,17 +139,46 @@ body{
         display: inline;
         margin-left: 5%;
     }
-    .menu i{
+    .menu a i{
         position: relative;
         font-size: 26px;
     }
+    .menu a{
+        color: black;
+    }
     .menu ul{
         display: none;
-        position: fixed;
-        /* margin-top: 15%; */
+        /* display: flex; */
+        flex-direction: column;
+        /* justify-content: center; */
+        padding-top: 40px;
+        align-items: center;
+        gap: 20px;
+        position: absolute;
+        background-color: white;
+        margin-top: 30%;
         width: 70vw;
-        height: 84vh;
+        height: 70vh;
         z-index: -2;
+    }
+    .menu ul li a{
+        font-size: 22px;
+        margin-right: 20px;
+        color: black;
+    }
+    .menu ul li a span{
+        font-size: 22px;
+    }
+    .menu ul li a:hover{
+        background-color: rgb(65, 63, 63);
+        color: white;
+    }
+    .socials{
+        margin-top: 25%;
+    }
+    .socials a i{
+        font-size: 16px;
+        /* color: black; */
     }
     .search-bar{
         position: relative;

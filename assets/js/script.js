@@ -10,3 +10,14 @@ function showSearchInput(){
     }
 }
 
+// open and close menu on Mobile
+menuIcon = document.getElementById("menu-icon");
+menuList = document.getElementById("menu-list");
+
+function showMenuList(){
+    if (menuList.style.display === "flex"){
+        menuList.style.display = "none";
+    }else{
+        menuList.style.display = "flex";
+    }
+}
